@@ -285,6 +285,29 @@ https://templatemo.com/tm-559-zay-shop
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
     <!-- End Script -->
+
+    <!-- Start Banner Hero -->.
+    <?php
+    // Načítanie JSON súboru
+    $json_data = file_get_contents('banner.json');
+
+    // Prevod JSON na PHP array
+    $data = json_decode($json_data, true);
+
+    // Zobrazenie údajov na stránke
+    echo "<div id='info-section'>";
+    echo "<h2>" . $data['name'] . "</h2>";
+    echo "<p>" . $data['description'] . "</p>";
+    echo "<p><strong>Date:</strong> " . $data['date'] . "</p>";
+    echo "<p><strong>Location:</strong> " . $data['location'] . "</p>";
+    echo "</div>";
+    ?>
+
+
+
+
+
+
 </body>
 
 </html>
